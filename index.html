@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+    <img class="logo" src="./images/logo.svg" alt="logo">
+    <main>
+        <!-- section one -->
+        <section class="sec-1">
+            <!--  bill input  -->
+            <label>Bill</label><br>
+            <input type="number" id="bill" placeholder="0" onkeyup="CalTip()" class="bill-inp">
+            <!-- btn sec container -->
+            <div class="btn-sec-cont">
+                <label>Select Tip %</label>
+                <div class="btn-sec">
+                    <button id="tipcent1" onclick="$('#TipPercent').val(this.value)" value="5">5%</button>
+                    <button id="tipcent2" onclick="$('#TipPercent').val(this.value)" value="10">10%</button>
+                    <button id="tipcent3" onclick="$('#TipPercent').val(this.value)" value="15">15%</button>
+                    <button id="tipcent4" onclick="$('#TipPercent').val(this.value)" value="25">25%</button>
+                    <button id="tipcent5" onclick="$('#TipPercent').val(this.value)" value="50">50%</button>
+                    <input type="number" class="cus-inp" placeholder="Custom" id="TipPercent">
+                </div>
+            </div>
+            <!--  number of people input  -->
+            <div class="no_ppl_sec">
+                <label>Number of People</label>
+                <div id="error"></div>
+            </div>
+            <input type="number" id="no_ppl" class="no_ppl" placeholder="0" onkeyup="CalTip()">
+        </section>
+        <!-- section two -->
+        <section class="sec-2">
+            <span>
+                <div>
+                    <h1>Tip Amount</h1>
+                    <p>/ person</p>
+                </div>
+                <div>
+                    <h2 id="Tipresult">$0.00</h2>
+                </div>
+            </span>
+            <span>
+                <div>
+                    <h1>Total</h1>
+                    <p>/ person</p>
+                </div>
+                <div>
+                    <h2 id="total">$0.00</h2>
+                </div>
+            </span>
+            <button onclick="reset()">Reset</button>
+        </section>
+    </main>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Code Rio</a>.
+    </div>
+</body>
+<script src="./script/jquery.js"></script>
+<script src="./script/index.js"></script>
+<script>
+
+</script>
+
+</html>

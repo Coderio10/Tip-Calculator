@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    
+}
+:root{
+    --Strongcyan: hsl(172, 67%, 45%);
+    --Verydarkcyan: hsl(183, 100%, 15%);
+    --Darkgrayishcyan: hsl(186, 14%, 43%);
+    --Grayishcyan: hsl(184, 14%, 56%);
+    --Lightgrayishcyan: hsl(185, 41%, 84%);
+    --Verylightgrayishcyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    background-color: var(--Lightgrayishcyan);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background-color: var(--White);
+    display: flex;  
+    width: 700px;
+    padding: 25px;
+    border-radius: 10px;
+    gap: 30px;
+}
+/* input */
+input{
+    padding: 0px 10px;
+}
+input:focus, input:active{
+    outline: none;
+    border: 2px solid var(--Strongcyan);
+    text-align: right;
+}
+/* To remove default setting of input[number] */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+/* logo */
+.logo{
+    width: 70px;
+    margin-bottom: 20px;
+}
+/* section one */
+.sec-1{
+    width: 50%;
+    color: var(--Verydarkcyan);
+}
+/* btn sec container */
+.btn-sec-cont{
+    margin: 30px auto;
+    width: 100%;
+}
+/* bill input */
+.bill-inp{
+    background: url(./images/icon-dollar.svg) no-repeat ;
+    background-position: 10px 10px;
+    margin-top: 5px;
+}
+.bill-inp::placeholder, .no_ppl::placeholder{
+    text-align: right;
+}
+.cus-inp::placeholder{
+    text-align: center;
+}
+/* number of people input */
+.no_ppl{
+    background: url(./images/icon-person.svg) no-repeat ;
+    background-position: 10px 10px;
+}
+.no_ppl_sec{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.no_ppl_sec #error{
+    color: red;
+    text-align: right;
+}
+.no_ppl_sec label{
+    text-align: left;
+}
+.no_ppl.error{
+    border-color: red;
+}
+.bill-inp, .no_ppl{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: right;
+    font-weight: 700;
+    font-size: 18px;
+    height: 40px;
+    color: var(--Verydarkcyan);
+    background-color: var(--Verylightgrayishcyan);
+}
+.btn-sec{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-top: 5px;
+}
+.btn-sec button{
+    background-color: var(--Verydarkcyan);
+    color: var(--White);
+    border: none;
+    border-radius: 5px;
+    width: 95px;
+    height: 35px;
+    font-size: 16px;
+}
+.btn-sec button:hover{
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+}
+/* custom input */
+.cus-inp{
+    border: none;
+    border-radius: 5px;
+    width: 95px;
+    height: 40px;
+    font-size: 16px;
+    padding: 7px;
+    text-align: right;
+    font-weight: 700;
+    color: var(--Verydarkcyan);
+    background-color: var(--Verylightgrayishcyan);
+}
+/* section two */
+.sec-2{
+    width: 50%;
+    background-color: var(--Verydarkcyan);
+    padding: 25px;
+    border-radius: 10px;  
+}
+.sec-2 span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sec-2 span div{
+    text-align: left;
+    margin-bottom: 10px;
+}
+.sec-2 span div:nth-child(2){
+    text-align: right;
+}
+.sec-2 h1{
+    font-size: 15px;
+    color: var(--White);
+}
+
+.sec-2 p{
+    font-size: 13px;
+    color: var(--Darkgrayishcyan);
+}
+.sec-2 h2, #total{
+    font-size: 32px;
+    color: var(--Strongcyan);
+    text-align: right;
+}
+.sec-2 button{
+    margin-top: 100px;
+    background-color: var(--Strongcyan);
+    color: var(--Verydarkcyan);
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.sec-2 button:hover{
+    background-color: var(--Lightgrayishcyan);
+    color: var(--Verydarkcyan);
+
+}
+@media (max-width: 720px){
+    main{
+        flex-direction: column; 
+        width: 350px;
+        padding: 20px;
+    }
+    .sec-1{
+        width: 100%;
+    }
+    .sec-2{
+        width: 100%;
+    }
+}
+@media (max-width: 370px){
+    main{
+        flex-direction: column; 
+        width: 100%;
+        padding: 20px;
+    }
+    .sec-1{
+        width: 100%;
+    }
+    .sec-2{
+        width: 100%;
+    }
+    .btn-sec{
+        grid-auto-columns: repeat(3, 1fr);
+    }
+    .btn-sec button{
+        width: 25vw;
+        height: 35px;
+        font-size: 16px;
+    }
+    .cus-inp{
+        width: 25vw;
+    }
+}
