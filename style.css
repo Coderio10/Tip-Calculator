@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Poppins;
-    
+    font-family: 'Space Mono', monospace;    
 }
 :root{
     --Strongcyan: hsl(172, 67%, 45%);
@@ -62,7 +62,7 @@ input[type=number] {
     color: var(--Verydarkcyan);
 }
 /* btn sec container */
-.btn-sec-cont{
+.btn-sec-cont{      
     margin: 30px auto;
     width: 100%;
 }
@@ -226,4 +226,4 @@ input[type=number] {
     .cus-inp{
         width: 25vw;
     }
-}
+}   
