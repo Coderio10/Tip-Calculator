@@ -208,7 +208,7 @@ input[type=number] {
 }
 @media (max-width: 370px){
     body{
-        padding: 50px 0;
+        padding: 50px 10px;
     }    
     main{
         width: 100%;
