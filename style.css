@@ -191,6 +191,9 @@ input[type=number] {
 
 }
 @media (max-width: 720px){
+    body{
+        padding: 50px;
+    }    
     main{
         flex-direction: column; 
         width: 350px;
@@ -205,14 +208,6 @@ input[type=number] {
 }
 @media (max-width: 370px){
     main{
-        flex-direction: column; 
-        width: 100%;
-        padding: 20px;
-    }
-    .sec-1{
-        width: 100%;
-    }
-    .sec-2{
         width: 100%;
     }
     .btn-sec{
