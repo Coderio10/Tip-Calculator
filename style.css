@@ -210,6 +210,12 @@ input[type=number] {
     main{
         width: 100%;
     }
+    .sec-1{
+        width: 100%;
+    }
+    .sec-2{
+        width: 100%;
+    }
     .btn-sec{
         grid-auto-columns: repeat(3, 1fr);
     }
